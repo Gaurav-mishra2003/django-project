@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>welcome to test</h1>
+
+  <!-- <form method="post"> -->
+        {% for items in list_question %}
+        <!-- {% csrf_token %} -->
+        <p>que {{items.id}}.{{items.ques}}</p><br><br>
+
+        a. {{items.opt1}}<input type="radio" name="box" value='{{items.opt1}} mohan'><br><br>
+        b. {{items.opt2}}<input type="radio" name="box" value='{{items.opt2}}'><br><br>
+        c. {{items.opt3}} <input type="radio" name="box" value='{{items.opt3}}'><br><br>
+        d. {{items.opt4}} <input type="radio" name="box" value='{{items.opt4}}'><br><br>
+        {% endfor %}
+       
+         <!-- <button onclick="displayRadioValue()">Submit</button>--> 
+        <button onclick="display()">click now</button>
+        <script>
+        function display(){
+        // h1=document.getElementsByTagName('h1')
+        // h1[0].textContent='welcome sir selected answer is :'
+        rediobox=document.getElementsByName('box')
+        for(i=0;i<rediobox.length;i++){
+            if(rediobox[i].checked){
+                selectedAns=rediobox[i].value
+                 h1=document.getElementsByTagName('h1')
+                 h1[0].textContent='welcome sir selected answer is : '+selectedAns
+            }
+        }
+
+ }
+            
+        </script>
+      
+</body>
+
+</html> 

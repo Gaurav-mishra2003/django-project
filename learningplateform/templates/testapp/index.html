@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body>
+    <h1>Employee data </h1>
+    {% if emplist %}
+    <table border="1">
+        <th>employee name</th>
+        <th>employee sallary</th>
+
+        {% for emp in emplist %}
+        <tr >
+            <td>{{emp.ename}}</td>
+            <td>{{emp.esallary}}</td>
+        </tr>
+       
+        <!-- <p>{{emp.ename}}</p>
+        <p>{{emp.esallary}}</p> -->
+        {% endfor %}
+        {% else %}
+        <p>no record found</p>
+        {% endif %}
+    </table>
+    
+</body>
+</html>

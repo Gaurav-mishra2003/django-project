@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to home page</h1>
+    {% for item in list_items1 %}
+    <span>{{item.name}}</span>
+    {% endfor %}
+
+    <br><br><br>
+    {{list_items1}}
+    <br>
+    has previous : {{list_items1.has_previous}}  
+    <br>
+    has next :{{list_items.has_next}}
+    current page : {{list_items1.number}}
+    number of pages : {{list_items1.paginator.num_pages}}
+    to get the previous page number : {{list_items1.previous_page_number}}
+    to get the next page number : {{list_items1.next_page_number}}
+    
+
+    <br><hr>
+    {% if list_items1.has_previous %}
+    <a href="?page=1">&laquo first</a>
+<a href="?page={{list_items1.previous_page_number}}">Previous</a>
+{% endif %}
+
+
+page {{list_items1.number}} of {{list_items1.paginator.num_pages}}
+
+{% if list_items1.has_next %}
+<a href="?page={{list_items1.next_page_number}}">&raquo next</a>
+<a href="?page={{list_items1.paginator.num_pages}}">last</a>
+{% endif %}
+</body>
+</html>

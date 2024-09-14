@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'blogapp/blog.css' %}">
+</head>
+<body>
+    {% if submitted %}
+   
+    <div class="container">
+    <h1>Blog app</h1>
+    <h2>{{name}}</h2>
+    <p>{{about}}</p>
+
+</div>
+{%else %}
+    <h1>blog app</h1>
+    <form  method="post">
+        {{blog.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="button">
+    </form>
+    {% endif %}
+</body>
+</html>

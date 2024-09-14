@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    
+    
+<body>
+<div class="head">
+    <nav class="navbar navbar-expand-lg  bg-dark ">
+        <a class="navbar-brand" href="#" style="color: white;">Grow</a>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: white;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#terms" style="color: white;">Terms & Coditions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/java/{{1}}" style="color: white;">Start Test</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#h2" style="color: white;">Query Form</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" align='center'>
+        <h1>Welcome to Learn and Grow </h1>
+        <a href="/java/{{1}}" class="btn btn-primary">start test</a>
+    </div></div>
+    
+    <hr>
+    <h2 id="h2">Terms and Conditions</h2>
+    <div class="container" id="terms" align=" center">
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit distinctio animi mollitia repellendus?
+           sapiente architecto nostrum, vero animi error
+            aut! Enim impedit totam accusantium obcaecati voluptates at recusandae illo odio unde doloremque deleniti
+            laborum cum, eligendi error commodi. Expedita tempora libero fugit molestias quas suscipit labore ea iste
+            vero sed impedit voluptatum dicta eos eaque iusto architecto nesciunt, molestiae a? Nesciunt sed dignissimos
+            voluptas eligendi quasi repellat qui accusantium incidunt dolorem esse, necessitatibus nihil officia
+            blanditiis. Minima dolorem rem quo exercitationem iusto delectus sequi ad, impedit quos. Voluptas
+            reprehenderit modi fugit omnis ipsum repellendus enim quasi, quos ducimus? Fugit iste reprehenderit nulla
+            eius vitae animi eum molestiae, ullam quasi laboriosam voluptate mollitia odit cum iure eveniet voluptas
+            officia possimus? Molestias quaerat itaque esse incidunt.</p>
+            <button class="btn btn-success">Learn More</button>
+        </div>
+        <br><br><hr>
+        <h2 id="h2">Fill Query Form</h2>
+        <form action="" align="center">
+            <bold>Name </bold><input type="text" placeholder="enter your name" ><br><br>
+            <bold>Email </bold><input type="email" placeholder="enter email"><br><br>
+            <bold>Query </bold><textarea name="" id="textarea" cols="30" rows="10"></textarea><br><br>
+           <button class="btn btn-warning">Submit</button><br><br>
+        </form>
+        <bold id="footer">@copyright||GAURAV MISHRA</bold>
+       
+</body>
+
+</html>

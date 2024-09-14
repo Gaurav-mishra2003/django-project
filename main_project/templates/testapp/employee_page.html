@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello ji welcome to EMPLOYEE page</h1><hr>
+    {% if list_item%}
+    {% for items in list_item%}
+    <table border="2">
+        
+            <th>ENAME</th>
+            <th>ESALLARY</th>
+            <th>ENUMBER</th>
+            <th>EADDRESS</th>
+       
+            <tr>
+                <td>{{items.ename}}</td>
+                <td>{{items.esallary}}</td>
+                <td>{{items.enumber}}</td>
+                <td>{{items.eaddress}}</td>
+            </tr>
+    </table>
+   
+    {% endfor%}
+    {% else %}
+    <p>no employee gata found</p>
+    {% endif %}
+</body>
+</html>

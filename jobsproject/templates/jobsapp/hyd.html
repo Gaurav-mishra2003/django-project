@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hyd jobs</h1>
+        {% if list_info %}
+       {% for job in list_info % } 
+       <p>{{job.name}}</p>
+       <p>{{job.eaddress}}</p>
+       <p>{{job.esallary}}</p>
+       <p>{{job.email}}</p>
+ {% endfor %}
+{% else %}
+<p>no jobs</p>
+{% endif %}
+    
+</body>
+</html>

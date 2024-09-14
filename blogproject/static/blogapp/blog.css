@@ -1,0 +1,17 @@
+.container{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-color: rgb(234, 237, 43);
+    text-align: center;
+}
+h1{
+    font-size: 30px;
+    border: 2px solid pink;
+    
+}
+h2{
+    font-size: 30px;
+    border: 2px solid pink;
+    
+}

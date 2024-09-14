@@ -1,0 +1,20 @@
+body{
+    background-color: brown;
+}
+.container{
+    width: 50%;
+    margin: 200px auto;
+    height: 500px;
+}
+#id_name{
+    width: 200px;
+    height: 100px;
+}
+#id_marks{
+    width: 200px;
+    height: 100px;
+}
+#id_age{
+    width: 200px;
+    height: 100px;
+}

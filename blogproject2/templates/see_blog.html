@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if list_data %}
+
+    {% for data_items in list_data %}
+    <p><span>Created by :</span>{{data_items.created_by}}</p>
+    <p><span>title of blog :{{data_items.Title}}</p>
+    <p><span>description of blog : {{data_items.Descreption}}</p>
+   <span>creation time {{data_items.created}}</span>
+   <span>last updated time of blog :{{data_items.updated}}</span>
+   <a href="/update/{{data_items.id}}">Update Blog</a>
+   <a href="delete/{{data_items.id}}">Dalete Blog</a>
+   <hr>
+   {% endfor %}
+   {% else %}
+   <p>no record faund</p>
+   {% endif %}
+</body>
+</html>

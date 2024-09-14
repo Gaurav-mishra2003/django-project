@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .card {
+            margin-top: 50px;
+        }
+
+        #main_heading {
+            margin-top: 20px;
+            color: white;
+        }
+
+        body {
+            background-image: url("https://images.unsplash.com/photo-1505635552518-3448ff116af3?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" align="center">
+        <h1 id="main_heading">SEE COURSE ENROLLED STUDENTS</h1>
+        {% if list_items%}
+        {% for items in list_items%}
+        <div class="card" style="width: 30rem;">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Student Name:</strong>{{items.Sname}}</h5>
+
+                <p class="card-text"><strong>Student Course Name:</strong> {{items.ScourseName}}</p>
+                <p class="card-text"><strong>Student Address: </strong>{{items.Saddress}}</p>
+                <a href="/student/" class="btn btn-primary">GO STUDENT PAGE</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>no record found please enroll on any courses</p>
+    </div>
+    {% endif %}
+</body>

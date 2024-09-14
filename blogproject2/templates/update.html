@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update form</title>
+</head>
+<body>
+    <form action="" method="post">
+       
+        Created_by :<input type="text" value="{{data_item.Created_by}}"><br><br>
+        Title :<input type="text" value="{{data_item.Title}}"><br><br><br>
+        Descreption :<input type="text" value="{{data_item.Descreption}}"><br><br>
+        created:<input type="text" value="{{data_item.created}}"><br><br>
+        updated :<input type="text" value="{{data_item.updated}}"><br><br>
+        {% csrf_token %}
+       <input type="submit" value="submit">
+      
+    </form>
+</body>
+</html>

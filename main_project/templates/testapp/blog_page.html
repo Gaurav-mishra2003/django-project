@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello ji welcome to BLOG page</h1><hr>
+    {% if list_item%}
+    {% for items in list_item%}
+    <table border="2">
+       
+            <th>BNAME</th>
+            <th>DESCRIPTION</th>
+            <th>DATE</th>
+        <tr>
+            <td>{{items.bname}}</td>
+            <td>{{items.description}}</td>
+            <td>{{items.date}}</td>
+        
+    </table>
+   
+    {% endfor %}
+    {% else %}
+    <p>no blog data found</p>
+    {% endif %}
+    <a href="">INSERT</a>
+</body>
+</html>

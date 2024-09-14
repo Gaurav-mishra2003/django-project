@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WELCOME TO TODAY BLOG</h1>
+   {% if request.session %}
+   {% for key,value in request.session.items%}
+   <h2>{{key}}</h2>
+   <h2>{{value}}</h2>
+   {% endfor%}
+   {% else %}
+   <p>please add some blogs</p>
+
+   {% endif %}
+</body>
+</html>
